@@ -5,7 +5,7 @@ function App() {
     const popupRef = useRef();
     const buttonRef = useRef();
 
-    useEffect(() => {
+    useLayoutEffect(() => {
         if (popupRef.current == null || buttonRef.current == null) return;
         const {bottom} = buttonRef.current.getBoundingClientRect();
         popupRef.current.style.top = `${bottom + 25}px`
